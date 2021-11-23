@@ -1,0 +1,95 @@
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+public class  Main {
+    public static void main (String[] args) {
+        int score=100;
+        while(score>2){
+            Random rand = new Random();
+            System.out.println("Vyber si ciernu alebo cervenu farbu");
+            System.out.print("pre cervenu stlac 1 a pre ciernu stlac 2 : ");
+            Scanner sc = new Scanner (System.in);
+            int farba = sc.nextInt();
+            if (farba>1 || farba<2){
+                System.out.println("neuhadol si");
+            }
+            else {}
+            int tip = rand.nextInt(2);
+            System.out.println("Konto: " + score);
+            System.out.print("vklad: ");
+            int vklad = sc.nextInt();
+            if(farba == tip) {
+                System.out.println("Uhadol si farbu");
+                score = vklad + score;
+                System.out.println("vase konto je: "+score);
+            }
+            else {
+                System.out.println("Neuhadol si farbu");
+                score = score - vklad;
+                System.out.println("vase konto je: " + score);
+            }
+            if(score<2){
+                System.out.println("---------------------------");
+                System.out.println("KONIEC");
+                break;
+            }
+            System.out.println("ak chces ukoncit hru stlac 1 alebo 0 pre pokracovanie");
+            if(sc.nextInt()==1) {
+                System.out.println("---------------------------");
+                System.out.println("KONIEC");
+                break;
+            }
+        }
+    }
+}
+
+
+-------------------------
+package com.company;
+import java.util.Scanner;
+
+public class  Main {
+     class cislo{
+     }
+
+public static void main(String args[])
+{
+    System.out.print("Kolko krat:");
+Scanner sc= new Scanner (System.in);
+int d=sc.nextInt();
+int a=1,b=1,c,i;
+System.out.print(a+" "+b);
+
+for(i=2;i<d;++i)
+        {
+            c=a+b;
+            System.out.print(" "+c);
+            a=b;
+            b=c;
+        }
+}
+}
+
+
+------------------------------------
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.print("Zadaj kolko km prejdes na 1.den: ");
+        Scanner sc = new Scanner (System.in);
+        double km = sc.nextDouble();
+        System.out.print("zadaj dialku kolko chces prejst: ");
+        double dialka = sc.nextDouble();
+        double a;
+        double b=km;
+        for (a = 1; b < dialka; a++) {
+            b=b*1.10;
+
+        }
+        System.out.println("Za 1 den: "+km);
+        System.out.println("Dialku ktoru prejdes:"+dialka);
+        System.out.println("Presiel si za: "+a+" dni a celkovo si presiel: "+b);
+    }
+}
